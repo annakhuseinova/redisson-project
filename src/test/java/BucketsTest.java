@@ -3,7 +3,7 @@ import org.redisson.client.codec.StringCodec;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
-public class BucketAsMapTest extends BaseTest{
+public class BucketsTest extends BaseTest{
 
     /**
      * In order to be able to get multiple key-value pairs, we can use RBuckets / RBucketsReactive object
