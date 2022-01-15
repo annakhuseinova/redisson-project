@@ -8,7 +8,7 @@ import org.redisson.api.RedissonReactiveClient;
 public abstract class BaseTest {
 
     private final RedissonConfig redissonConfig = new RedissonConfig();
-    private RedissonReactiveClient redissonReactiveClient;
+    protected RedissonReactiveClient redissonReactiveClient;
 
     @BeforeAll
     public void setClient(){
@@ -18,6 +18,14 @@ public abstract class BaseTest {
     @AfterAll
     public void shutdown(){
         this.redissonReactiveClient.shutdown();
+    }
+
+    protected void sleep(long millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
