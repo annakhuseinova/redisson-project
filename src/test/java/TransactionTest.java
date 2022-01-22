@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Test;
 import org.redisson.api.RBucketReactive;
-import org.redisson.api.TransactionOptions;
 import org.redisson.client.codec.LongCodec;
 
 public class TransactionTest extends BaseTest{

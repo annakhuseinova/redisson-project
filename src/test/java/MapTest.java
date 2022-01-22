@@ -30,6 +30,7 @@ public class MapTest extends BaseTest{
         );
         StepVerifier.create(map.putAll(java).then())
                 .verifyComplete();
+
     }
 
     @Test
